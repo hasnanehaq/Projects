@@ -1,0 +1,12 @@
+def find_median(numbers):
+    numbers.sort()
+    length = len(numbers)
+    if length % 2 == 0:
+        median = (numbers[length // 2] + numbers[length // 2 - 1]) / 2
+    else:
+        median = numbers[length // 2]
+    return median
+
+numbers = list(map(int, input("Enter a list of numbers separated by space: ").split()))
+median = find_median(numbers)
+print("The median of the numbers is:", median)
