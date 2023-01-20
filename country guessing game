@@ -1,0 +1,19 @@
+
+
+def game():
+    country_list = ["India", "China", "United States", "Russia", "Australia", "Brazil", "South Africa"]
+    country = random.choice(country_list)
+    guess = None
+    tries = 5
+    print("Welcome to Guess the Country Game!\n")
+    while guess != country and tries > 0:
+        guess = input("Guess the name of a country: ").capitalize()
+        if guess != country:
+            tries -= 1
+            print("Wrong! You have", tries, "tries left.")
+        else:
+            print("Congratulations! You guessed the country correctly.")
+    if tries == 0:
+        print("You ran out of tries. The country was", country + ".")
+
+game()
