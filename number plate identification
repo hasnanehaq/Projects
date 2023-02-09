@@ -1,0 +1,12 @@
+import re
+
+def is_abnormal_number_plate(plate):
+    pattern = re.compile("^[A-Z]{2}[0-9]{2} [A-Z]{3}$")
+    return pattern.match(plate) is None
+
+if __name__ == "__main__":
+    number_plate = input("Enter the number plate: ")
+    if is_abnormal_number_plate(number_plate):
+        print("Abnormal number plate.")
+    else:
+        print("Normal number plate.")
