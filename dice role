@@ -1,0 +1,34 @@
+import random
+
+# Set the target score
+TARGET_SCORE = 20
+
+# Set the maximum number of rolls
+MAX_ROLLS = 3
+
+# Initialize the player's score and the number of rolls
+score = 0
+num_rolls = 0
+
+# Start the game loop
+while num_rolls < MAX_ROLLS:
+    # Roll the dice
+    roll = random.randint(1, 6)
+    
+    # Add the roll to the player's score
+    score += roll
+    
+    # Display the roll and the player's score
+    print("You rolled a", roll, "and your score is now", score)
+    
+    # Check if the player has reached the target score
+    if score >= TARGET_SCORE:
+        print("Congratulations! You reached the target score of", TARGET_SCORE, "in", num_rolls+1, "rolls.")
+        break
+    
+    # Increment the number of rolls
+    num_rolls += 1
+
+# Check if the player has used all their rolls without reaching the target score
+if score < TARGET_SCORE:
+    print("Sorry, you did not reach the target score of", TARGET_SCORE, "in", MAX_ROLLS, "rolls.")
