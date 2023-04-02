@@ -1,0 +1,20 @@
+# Define the sentence
+sentence = "This is a test sentence. This sentence is for testing purposes."
+
+# Split the sentence into individual words
+words = sentence.split()
+
+# Create a dictionary to store the word frequency
+word_freq = {}
+
+# Iterate through each word in the sentence
+for word in words:
+    # If the word is not already in the dictionary, add it with a count of 1
+    if word not in word_freq:
+        word_freq[word] = 1
+    # If the word is already in the dictionary, increment its count by 1
+    else:
+        word_freq[word] += 1
+
+# Print the word frequency dictionary
+print(word_freq)
